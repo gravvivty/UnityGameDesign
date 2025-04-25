@@ -10,18 +10,26 @@ namespace Project.Helper
     {
         [SerializeField] private Camera mainCamera;
 
-
         /// <summary>
         /// Returns the game object that is hit by the raycast from the mouse position.
+        /// If the raycast hits multiple objects, it will return the first one that is not tagged as "Ground".
         /// </summary>
         public GameObject GetGameObject()
         {
             Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(mousePosition, Vector2.zero);
 
-            if (hit.collider != null)
+            foreach (RaycastHit2D hit in hits)
             {
-                return hit.collider.gameObject;
+                if (hit.collider != null && !hit.collider.CompareTag("Ground"))
+                {
+                    return hit.collider.gameObject;
+                }
+            }
+
+            if (hits.Length > 0)
+            {
+                return hits[0].collider.gameObject;
             }
             return null;
         }

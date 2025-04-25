@@ -45,7 +45,13 @@ TagManager:
   - name: Ground
     uniqueID: 3930634127
     locked: 0
-  - name: Player
+  - name: PlayerBelow
+    uniqueID: 2274414727
+    locked: 0
+  - name: NPC
+    uniqueID: 2612552603
+    locked: 0
+  - name: PlayerAbove
     uniqueID: 4257416075
     locked: 0
   m_RenderingLayers:
