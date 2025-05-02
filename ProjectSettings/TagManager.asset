@@ -54,5 +54,8 @@ TagManager:
   - name: PlayerAbove
     uniqueID: 4257416075
     locked: 0
+  - name: Dialogue
+    uniqueID: 4088183047
+    locked: 0
   m_RenderingLayers:
   - Default

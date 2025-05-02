@@ -65,7 +65,6 @@ namespace Project.Player
                     float distanceToTarget = Vector2.Distance(transform.position, targetPosition);
                     if (distanceToTarget <= minDistanceToInteractable)
                     {
-                        Debug.Log("Reached interactable: " + currentInteractable.name);
                         isMoving = false;
                     }
                 }

@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Project.Helper
 {
+    /// <summary>
+    /// This class is used to create an outline effect for a sprite.
+    /// </summary>
     public class SpriteOutline : MonoBehaviour
     {
         [SerializeField] private Color outlineColor = Color.red;
@@ -10,6 +13,10 @@ namespace Project.Helper
         private SpriteRenderer outlineRenderer;
         private SpriteRenderer mainRenderer;
 
+        /// <summary>
+        /// Initializes the outline by creating a child object and setting up the sprite renderer.
+        /// Copy the sprite and sorting properties from the main sprite renderer.
+        /// </summary>
         private void Start()
         {
             // Create child object for outline
@@ -30,6 +37,9 @@ namespace Project.Helper
             outlineRenderer.gameObject.SetActive(false);
         }
 
+        /// <summary>
+        /// Shows or hides the outline based on the provided boolean value.
+        /// </summary>
         public void ShowOutline(bool show)
         {
             if (outlineRenderer != null)

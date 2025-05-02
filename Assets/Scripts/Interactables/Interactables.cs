@@ -3,6 +3,9 @@ using Project.Helper;
 
 namespace Project.Interactable
 {
+    /// <summary>
+    /// Base class for all interactable objects in the game.
+    /// </summary>
     public abstract class Interactables : MonoBehaviour
     {
         [SerializeField] private MouseRaycast mouseRaycast;
@@ -37,6 +40,9 @@ namespace Project.Interactable
             }
         }
 
+        /// <summary>
+        /// Handles the hover effect by showing or hiding the outline.
+        /// </summary>
         private void HandleHoverEffect(bool shouldHighlight)
         {
             if (spriteOutline != null)

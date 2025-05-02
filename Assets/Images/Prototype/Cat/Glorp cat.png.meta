@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Glorp cat_0: 7035699271571955438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
