@@ -8,13 +8,16 @@ namespace Project.Interactable
     /// </summary>
     public abstract class Interactables : MonoBehaviour
     {
-        [SerializeField] private MouseRaycast mouseRaycast;
+        private MouseRaycast mouseRaycast;
         private SpriteOutline spriteOutline;
         private bool isHighlighted = false;
+        private bool waitingForPlayerToGetClose = false;
+        private float minInteractionDistance = 5f;
 
         protected virtual void Start()
         {
             spriteOutline = gameObject.AddComponent<SpriteOutline>();
+            mouseRaycast = GameObject.FindGameObjectWithTag("Mouse").GetComponent<MouseRaycast>();
         }
 
         protected virtual void Update()
@@ -34,9 +37,24 @@ namespace Project.Interactable
                 HandleHoverEffect(shouldHighlight);
             }
 
-            if (Input.GetMouseButtonDown(0) && shouldHighlight)
+            // Check if we're waiting for player to get close
+            if (waitingForPlayerToGetClose)
             {
-                Interact();
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    float distance = Vector3.Distance(transform.position, player.transform.position);
+                    if (distance <= minInteractionDistance)
+                    {
+                        waitingForPlayerToGetClose = false;
+                        Interact();
+                    }
+                }
+            }
+            // Only start interaction process when clicked
+            else if (Input.GetMouseButtonDown(0) && shouldHighlight)
+            {
+                waitingForPlayerToGetClose = true;
             }
         }
 
