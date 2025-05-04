@@ -10,7 +10,7 @@ namespace Project.Inventory
     public class ItemData : ScriptableObject
     {
         public string itemName;
-        public int itemID;
+        public string itemID;
         [TextArea] public string description;
         public Sprite icon;
     }

@@ -12,4 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a767e4dc89c5745a5ebd6ea6ecaec4, type: 3}
   m_Name: Cat NPC
   m_EditorClassIdentifier: 
-  dialogueLines: []
+  dialogueLines:
+  - DialogueID: Cat Dialogue 1
+    Text: Guhhhh
+    Choices:
+    - Text: Ok
+      NextDialogueID: 
+      Conditions: []
+    - Text: Vorp?
+      NextDialogueID: 
+      Conditions:
+      - Type: 0
+        ItemID: 1
+    Conditions:
+    - Type: 0
+      ItemID: 2
+    Rewards: []

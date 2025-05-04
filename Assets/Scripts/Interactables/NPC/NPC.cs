@@ -35,11 +35,6 @@ namespace Project.Interactable.NPC
                 return;
             }
 
-            if (!IsPlayerClose())
-            {
-                return;
-            }
-
             DialogueManager.Instance.StartDialogue(dialogueData, initialDialogueID, transform.position);
         }
 

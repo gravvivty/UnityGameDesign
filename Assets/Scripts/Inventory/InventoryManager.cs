@@ -39,7 +39,7 @@ namespace Project.Inventory
         /// </summary>
         /// <param name="itemID">The ID of the item to check for.</param>
         /// <returns>True if the item is found, false otherwise.</returns>
-        public bool HasItemWithID(int itemID)
+        public bool HasItemWithID(string itemID)
         {
             foreach (ItemData item in items)
             {
@@ -50,7 +50,7 @@ namespace Project.Inventory
             }
             return false;
         }
-        
+
         /// <summary>
         /// Checks whether an item with a specific name exists in the inventory.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Project.Inventory
             return false;
         }
 
-        
+
         /// <summary>
         /// Returns a copy of the current inventory list.
         /// </summary>

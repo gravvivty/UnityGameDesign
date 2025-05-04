@@ -36,7 +36,6 @@ namespace Project.Dialogue.Data
     {
         public ConditionType Type;
         public string ItemID;
-        public bool Required;
     }
 
     /// <summary>
@@ -50,12 +49,18 @@ namespace Project.Dialogue.Data
         public int Amount;
     }
 
+    /// <summary>
+    /// Enum to define the types of conditions that can be checked in a dialogue.
+    /// /summary>
     public enum ConditionType
     {
         HasItem,
         QuestComplete
     }
 
+    /// <summary>
+    /// Enum to define the types of rewards that can be given in a dialogue.
+    /// /summary>
     public enum RewardType
     {
         Item,
