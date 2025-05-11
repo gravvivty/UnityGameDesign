@@ -101,12 +101,12 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (droppedSlot == null || droppedSlot.itemData == null || itemData == null) return;
 
         // Prevent combining the same item with itself
-        if (droppedSlot.itemData == itemData)
+        /*if (droppedSlot.itemData == itemData)
         {
             Debug.LogWarning("Cannot combine an item with itself.");
             dragImage.enabled = false; // Ensure the drag image is hidden
             return;
-        }
+        }*/
 
         // Check if combination is possible
         if (droppedSlot.itemData.CanCombine(itemData.itemID))
