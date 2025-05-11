@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Inventory
@@ -10,8 +11,28 @@ namespace Project.Inventory
     public class ItemData : ScriptableObject
     {
         public string itemName;
-        public string itemID;
+        public int itemID;
         [TextArea] public string description;
         public Sprite icon;
+        
+        [System.Serializable]
+        public class Combination
+        {
+            public int otherItemID;
+            public ItemData resultItem;
+        }
+    
+        public List<Combination> possibleCombinations;
+
+        public bool CanCombine(int otherItemID)
+        {
+            return possibleCombinations.Exists(c => c.otherItemID == otherItemID);
+        }
+
+        public ItemData GetCombinationResult(int otherItemID)
+        {
+            Combination combination = possibleCombinations.Find(c => c.otherItemID == otherItemID);
+            return combination != null ? combination.resultItem : null;
+        }
     }
 }

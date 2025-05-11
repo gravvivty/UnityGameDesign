@@ -7,12 +7,20 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private GameObject inventorySlotPrefab;  // Reference to the Inventory Slot prefab
     [SerializeField] private Transform inventoryGrid;  // The grid where inventory slots are placed
     [SerializeField] private GameObject inventoryPanel;
-    private bool isOpen = false;
+    public static InventoryUI Instance;
+    public Image dragImage;
+    private bool isOpen = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-        inventoryPanel.SetActive(false);
+        inventoryPanel.SetActive(true);
+    }
+
+    private void Awake()
+    {
+        Instance = this;
+        dragImage.enabled = false;
     }
 
     // Update is called once per frame
@@ -41,8 +49,8 @@ public class InventoryUI : MonoBehaviour
             // Get the InventorySlotUI component from the new slot
             InventorySlotUI inventorySlotUI = inventorySlot.GetComponent<InventorySlotUI>();
 
-            // Assign the item's icon to the InventorySlotUI
-            inventorySlotUI.SetIcon(item.icon);
+            // Assign the item's data to the InventorySlotUI
+            inventorySlotUI.SetItemData(item);
         }
     }
     

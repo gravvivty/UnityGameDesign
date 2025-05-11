@@ -39,7 +39,7 @@ namespace Project.Inventory
         /// </summary>
         /// <param name="itemID">The ID of the item to check for.</param>
         /// <returns>True if the item is found, false otherwise.</returns>
-        public bool HasItemWithID(string itemID)
+        public bool HasItemWithID(int itemID)
         {
             foreach (ItemData item in items)
             {
@@ -76,6 +76,15 @@ namespace Project.Inventory
         public List<ItemData> GetAllItems()
         {
             return new List<ItemData>(items);
+        }
+        
+        public void RemoveItem(ItemData item)
+        {
+            if (items.Contains(item))
+            {
+                items.Remove(item);
+                Debug.Log($"Removed item: {item.itemName} (ID: {item.itemID})");
+            }
         }
     }
 }

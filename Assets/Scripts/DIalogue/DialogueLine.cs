@@ -35,7 +35,7 @@ namespace Project.Dialogue.Data
     public class DialogueCondition
     {
         public ConditionType Type;
-        public string ItemID;
+        public int ItemID;
     }
 
     /// <summary>
