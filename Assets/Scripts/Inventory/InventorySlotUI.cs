@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -14,6 +15,7 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public static RectTransform dragRectTransform;
     public GameObject tooltip;
     //[SerializeField] private GameObject tooltipObject;
+    private bool isPointerOver = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +28,14 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             {
                 Debug.LogError("TooltipUI not found in the scene. Please make sure a TooltipUI object is present.");
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (isPointerOver)
+        {
+            ShowTooltip();
         }
     }
 
@@ -59,24 +69,16 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (itemData != null)
-        {
-            tooltip.GetComponent<Image>().enabled = true;
-            foreach (Transform child in tooltip.transform)
-            {
-                child.gameObject.SetActive(true);
-            }
-            tooltip.GetComponent<TooltipUI>().ShowTooltip(itemData.itemName, itemData.description);
-        }
+        Debug.Log("Pointer entered: " + itemData.itemName);
+        tooltip.GetComponent<TooltipUI>().ChangeTooltip(itemData.itemName, itemData.description);
+        isPointerOver = true; 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        tooltip.GetComponent<Image>().enabled = false;
-        foreach (Transform child in tooltip.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        Debug.Log("Pointer exited: " + itemData.itemName);
+        isPointerOver = false;
+        HideTooltip();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -147,5 +149,23 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         // Ensure drag image is hidden after combination attempt
         dragImage.enabled = false;
+    }
+    
+    private void ShowTooltip()
+    {
+        if (itemData != null)
+        {
+            tooltip.GetComponent<TooltipUI>().SetShow(true);
+        }
+    }
+    
+    private void HideTooltip()
+    {
+         tooltip.GetComponent<TooltipUI>().SetShow(false);
+         tooltip.GetComponent<Image>().enabled = false;  // Disable the background image
+         foreach (Transform child in tooltip.transform)
+         {
+             child.gameObject.SetActive(false);  // Hide all tooltip child objects
+         }
     }
 }
