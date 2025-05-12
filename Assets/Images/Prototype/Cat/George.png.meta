@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 89d39089f6c7fc340a4f1e4d7722df3e
+guid: 2397a8c98cf3c024d8ff83fee86962e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8417420941954122440
-    second: Slot_0
+      213: 4839418475635104665
+    second: George_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slot_0
+      name: George_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 781
-        height: 781
+        width: 680
+        height: 624
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c20c12dfbfa0d470800000000000000
-      internalID: 8417420941954122440
+      spriteID: 99b51b79671192340800000000000000
+      internalID: 4839418475635104665
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Slot_0: 8417420941954122440
+      George_0: 4839418475635104665
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
