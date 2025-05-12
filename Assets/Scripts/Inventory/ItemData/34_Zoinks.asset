@@ -16,4 +16,6 @@ MonoBehaviour:
   itemID: 34
   description: The Ultimate Gleebs
   icon: {fileID: 7338733429884758749, guid: 45f2e3aa5d5534940bd22d36a90fc147, type: 3}
-  possibleCombinations: []
+  possibleCombinations:
+  - otherItemID: 34
+    resultItem: {fileID: 11400000, guid: 2987931f33e5ef74c9c50bec2b5a7791, type: 2}
