@@ -91,7 +91,6 @@ namespace Project.Dialogue
 
         private void GiveRewards(List<DialogueReward> rewards)
         {
-            Debug.Log($"Giving rewards for dialogue {currentDialogue.DialogueID}");
             if (rewards == null) return;
 
             foreach (var reward in rewards)
@@ -99,6 +98,7 @@ namespace Project.Dialogue
                 switch (reward.Type)
                 {
                     case RewardType.Item:
+                        Debug.Log($"Giving rewards {reward.ItemID} for dialogue {currentDialogue.DialogueID}");
                         break;
                 }
             }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Dialogue
+  - Mouse
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -50,6 +53,9 @@ TagManager:
     locked: 0
   - name: NPC
     uniqueID: 2612552603
+    locked: 0
+  - name: Item
+    uniqueID: 207057707
     locked: 0
   - name: PlayerAbove
     uniqueID: 4257416075

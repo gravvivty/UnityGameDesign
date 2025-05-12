@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 33b8f997a19fbcf42bdda207e48c7b09
+guid: 45f2e3aa5d5534940bd22d36a90fc147
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7035699271571955438
-    second: Glorp cat_0
+      213: 7338733429884758749
+    second: Zoinks_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Glorp cat_0
+      name: Zoinks_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 175
         y: 0
-        width: 465
-        height: 474
+        width: 442
+        height: 385
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eee5584f533d3a160800000000000000
-      internalID: 7035699271571955438
+      spriteID: ddaa0951c2b68d560800000000000000
+      internalID: 7338733429884758749
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Glorp cat_0: 7035699271571955438
+      Zoinks_0: 7338733429884758749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

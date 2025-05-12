@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 33b8f997a19fbcf42bdda207e48c7b09
+guid: 114896ab64d94be479da80b3f33e7a90
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7035699271571955438
-    second: Glorp cat_0
+      213: 1500210405531068392
+    second: Stare_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -85,9 +85,9 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 10
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -98,9 +98,9 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 10
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Glorp cat_0
+      name: Stare_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 0
         y: 0
-        width: 465
-        height: 474
+        width: 1492
+        height: 1390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eee5584f533d3a160800000000000000
-      internalID: 7035699271571955438
+      spriteID: 8e726065a61d1d410800000000000000
+      internalID: 1500210405531068392
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Glorp cat_0: 7035699271571955438
+      Stare_0: 1500210405531068392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
