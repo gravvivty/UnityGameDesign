@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Project.Inventory;
 using TMPro;
+using UnityEditor;
 
 public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -11,16 +12,16 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public ItemData itemData;
     public static Image dragImage;
     public static RectTransform dragRectTransform;
-    public TooltipUI tooltip;
-    [SerializeField] private GameObject tooltipObject;
+    public GameObject tooltip;
+    //[SerializeField] private GameObject tooltipObject;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (tooltip == null)
         {
-            tooltip = GameObject.Find("Tooltip").GetComponent<TooltipUI>();
-            
+            tooltip = GameObject.Find("Tooltip");
+
             if (tooltip == null)
             {
                 Debug.LogError("TooltipUI not found in the scene. Please make sure a TooltipUI object is present.");
@@ -39,7 +40,7 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             dragRectTransform = dragImage.GetComponent<RectTransform>();
         }
     }
-    
+
     /// <summary>
     /// Sets the image in the inventory UI.
     /// </summary>
@@ -55,19 +56,27 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         this.itemData = itemData;
         SetIcon(itemData.icon);
     }
-    
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (itemData != null)
         {
-            tooltipObject.SetActive(true);
-            tooltip.ShowTooltip(itemData.itemName, itemData.description);
+            tooltip.GetComponent<Image>().enabled = true;
+            foreach (Transform child in tooltip.transform)
+            {
+                child.gameObject.SetActive(true);
+            }
+            tooltip.GetComponent<TooltipUI>().ShowTooltip(itemData.itemName, itemData.description);
         }
     }
-    
+
     public void OnPointerExit(PointerEventData eventData)
     {
-        tooltipObject.SetActive(false);
+        tooltip.GetComponent<Image>().enabled = false;
+        foreach (Transform child in tooltip.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -77,7 +86,7 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         // Show drag image
         dragImage.sprite = itemData.icon;
-        dragImage.color = Color.white; 
+        dragImage.color = Color.white;
         dragImage.enabled = true;
     }
 
@@ -85,7 +94,7 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         dragRectTransform.position = Input.mousePosition;
     }
-    
+
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
@@ -94,7 +103,7 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         // Hide drag image
         dragImage.enabled = false;
     }
-    
+
     public void OnDrop(PointerEventData eventData)
     {
         InventorySlotUI droppedSlot = eventData.pointerDrag?.GetComponent<InventorySlotUI>();

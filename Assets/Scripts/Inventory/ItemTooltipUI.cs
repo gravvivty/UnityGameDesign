@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class TooltipUI : MonoBehaviour
 {
@@ -9,12 +10,17 @@ public class TooltipUI : MonoBehaviour
 
     private CanvasGroup canvasGroup;
 
-    private void Awake()
+    private void Start()
     {
         canvasGroup = tooltipObject.GetComponent<CanvasGroup>();
 
         // Make sure tooltipObject is active so it can receive updates and pointer events
         tooltipObject.SetActive(true);
+        tooltipObject.GetComponent<Image>().enabled = false;
+        foreach (Transform child in tooltipObject.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
     private void Update()
