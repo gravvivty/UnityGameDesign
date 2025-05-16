@@ -19,3 +19,5 @@ MonoBehaviour:
   possibleCombinations:
   - otherItemID: 1
     resultItem: {fileID: 11400000, guid: 3886f394bafc1494a9c3c772fdbd765e, type: 2}
+  - otherItemID: 3
+    resultItem: {fileID: 11400000, guid: 3886f394bafc1494a9c3c772fdbd765e, type: 2}

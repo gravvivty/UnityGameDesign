@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
-  m_Name: 34_Zoinks
+  m_Name: 23_George
   m_EditorClassIdentifier: 
-  itemName: Zoinks
-  itemID: 34
-  description: The Ultimate Gleebs
-  icon: {fileID: 7338733429884758749, guid: 45f2e3aa5d5534940bd22d36a90fc147, type: 3}
-  possibleCombinations:
-  - otherItemID: 34
-    resultItem: {fileID: 11400000, guid: 2987931f33e5ef74c9c50bec2b5a7791, type: 2}
+  itemName: George
+  itemID: 23
+  description: Uh oh... you've done it now. Run.
+  icon: {fileID: 4839418475635104665, guid: 2397a8c98cf3c024d8ff83fee86962e0, type: 3}
+  possibleCombinations: []
