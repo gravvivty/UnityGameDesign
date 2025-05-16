@@ -4,6 +4,7 @@ using Project.Dialogue.Data;
 using System.Collections.Generic;
 using TMPro;
 using Project.Inventory;
+using Unity.VisualScripting;
 
 namespace Project.Dialogue
 {
@@ -14,7 +15,6 @@ namespace Project.Dialogue
     {
         [SerializeField] private TextMeshProUGUI dialogueText;
         [SerializeField] private Transform choicesContainer;
-        [SerializeField] private GameObject choiceButtonPrefab;
 
         public void DisplayDialogue(DialogueLine dialogue)
         {
@@ -45,14 +45,35 @@ namespace Project.Dialogue
                 }
 
                 var choice = choices[i];
-                Vector3 buttonPosition = choicesContainer.position - new Vector3(0, i * 0.75f, 0);
-                var buttonObj = Instantiate(choiceButtonPrefab, buttonPosition, Quaternion.identity, choicesContainer);
-                var button = buttonObj.GetComponentInChildren<Canvas>().GetComponentInChildren<Button>();
-                var text = buttonObj.GetComponentInChildren<TextMeshProUGUI>();
-                text.text = choice.Text;
+                // Create a new GameObject for the button
+                GameObject buttonObj = new GameObject($"Choice Button {i}");
+                buttonObj.transform.SetParent(choicesContainer, false);
+
+                // Add required components
+                Button button = buttonObj.AddComponent<Button>();
+                Image buttonImage = buttonObj.AddComponent<Image>();
+                VerticalLayoutGroup layoutGroup = buttonObj.AddComponent<VerticalLayoutGroup>();
+                // Setup VerticalLayoutGroup
+                layoutGroup.childControlHeight = true;
+                layoutGroup.childControlWidth = true;
+                layoutGroup.childForceExpandHeight = false;
+                layoutGroup.childForceExpandWidth = false;
+                layoutGroup.childAlignment = TextAnchor.UpperLeft;
+                layoutGroup.padding = new RectOffset(50, 50, 50, 50);
+
+                // Create text child object
+                GameObject textObj = new GameObject("Choice Text");
+                textObj.transform.SetParent(buttonObj.transform, false);
+
+                // Add text component
+                TextMeshProUGUI tmpText = textObj.AddComponent<TextMeshProUGUI>();
+                tmpText.text = choice.Text;
+                tmpText.alignment = TextAlignmentOptions.Left;
+                tmpText.fontSize = 100;
+                tmpText.color = Color.black;
 
                 Debug.Log($"Choice {i}: {choice.Text}");
-                int choiceIndex = i; // Capture the current index for the listener
+                int choiceIndex = i;
                 button.onClick.AddListener(() => DialogueManager.Instance.MakeChoice(choiceIndex));
             }
         }
