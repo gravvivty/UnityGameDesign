@@ -69,7 +69,7 @@ namespace Project.Dialogue
                 TextMeshProUGUI tmpText = textObj.AddComponent<TextMeshProUGUI>();
                 tmpText.text = choice.Text;
                 tmpText.alignment = TextAlignmentOptions.Left;
-                tmpText.fontSize = 100;
+                tmpText.fontSize = 75;
                 tmpText.color = Color.black;
 
                 Debug.Log($"Choice {i}: {choice.Text}");

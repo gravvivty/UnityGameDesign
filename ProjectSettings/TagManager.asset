@@ -45,6 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 437047041
+    locked: 0
+  - name: House
+    uniqueID: 2948638083
+    locked: 0
   - name: Ground
     uniqueID: 3930634127
     locked: 0
@@ -57,11 +63,17 @@ TagManager:
   - name: Item
     uniqueID: 207057707
     locked: 0
+  - name: Dialogue
+    uniqueID: 4088183047
+    locked: 0
+  - name: Objects
+    uniqueID: 1234456679
+    locked: 0
   - name: PlayerAbove
     uniqueID: 4257416075
     locked: 0
-  - name: Dialogue
-    uniqueID: 4088183047
+  - name: Foreground
+    uniqueID: 1274524367
     locked: 0
   m_RenderingLayers:
   - Default

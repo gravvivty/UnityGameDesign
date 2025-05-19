@@ -13,6 +13,7 @@ namespace Project.Player
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private MouseRaycast mouseRaycast;
         [SerializeField] private float moveSpeed = 2f;
+        [SerializeField] private float valueAboveGround = 0f;
         [SerializeField] private float minDistanceToInteractable = 5f;
 
         private bool isMoving = false;
@@ -39,6 +40,7 @@ namespace Project.Player
 
             if (Input.GetMouseButtonDown(0))
             {
+                Debug.Log("GameObject hit: " + gameObjectHit?.name);
                 if (isGround)
                 {
                     Debug.Log("Clicked on ground: " + gameObjectHit.name);
@@ -84,7 +86,7 @@ namespace Project.Player
             if (spriteRenderer != null)
             {
                 // Set the sorting layer based on the Y position of the player
-                if (transform.position.y < 0)
+                if (transform.position.y < valueAboveGround)
                 {
                     spriteRenderer.sortingLayerID = SortingLayer.NameToID("PlayerAbove");
                 }

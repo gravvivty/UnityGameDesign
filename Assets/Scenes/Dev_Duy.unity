@@ -482,6 +482,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8417420941954122440, guid: 89d39089f6c7fc340a4f1e4d7722df3e, type: 3}
+    - target: {fileID: 4388069060326489115, guid: 1dd5563dc35db4442b3e74bec9377902, type: 3}
+      propertyPath: m_CellSize.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388069060326489115, guid: 1dd5563dc35db4442b3e74bec9377902, type: 3}
+      propertyPath: m_CellSize.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5168797862725046214, guid: 1dd5563dc35db4442b3e74bec9377902, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -610,6 +618,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8417420941954122440, guid: 89d39089f6c7fc340a4f1e4d7722df3e, type: 3}
+    - target: {fileID: 9005241042141843392, guid: 1dd5563dc35db4442b3e74bec9377902, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2425
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005241042141843392, guid: 1dd5563dc35db4442b3e74bec9377902, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 223.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1556,7 +1572,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.61, y: 2.9}
+    oldSize: {x: 3.61, y: 2.8999999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
