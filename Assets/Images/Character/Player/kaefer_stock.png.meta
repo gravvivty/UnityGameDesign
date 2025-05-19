@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kaefer_stock_0: -4161338148451293874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      village_smoke_3_0: 5852397052576279227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

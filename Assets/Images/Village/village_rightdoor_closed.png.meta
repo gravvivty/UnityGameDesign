@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: b889de9112004e847adf85604a7a0846
+guid: 903806e12332dc146a0c6dd11cbf49f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8317245351381931264
-    second: village_smoke_4_0
+      213: 8411736923661167488
+    second: village_rightdoor_closed_0
+  - first:
+      213: -3765645405421259827
+    second: village_rightdoor_closed_1
+  - first:
+      213: -2123776453403796484
+    second: village_rightdoor_closed_2
+  - first:
+      213: 8380764192364530502
+    second: village_rightdoor_closed_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: village_smoke_4_0
+      name: village_rightdoor_closed_0
       rect:
         serializedVersion: 2
-        x: 2185
-        y: 1688
-        width: 134
-        height: 472
+        x: 3543
+        y: 430
+        width: 239
+        height: 602
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00593e6949acc6370800000000000000
-      internalID: 8317245351381931264
+      spriteID: 08b6cde2a2e7cb470800000000000000
+      internalID: 8411736923661167488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: village_rightdoor_closed_1
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 910
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3b8cb747dbdbbc0800000000000000
+      internalID: -3765645405421259827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: village_rightdoor_closed_2
+      rect:
+        serializedVersion: 2
+        x: 3770
+        y: 887
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb17806194d682e0800000000000000
+      internalID: -2123776453403796484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: village_rightdoor_closed_3
+      rect:
+        serializedVersion: 2
+        x: 3772
+        y: 874
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b833831a47e4470800000000000000
+      internalID: 8380764192364530502
       vertices: []
       indices: 
       edges: []
@@ -134,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      village_smoke_4_0: 8317245351381931264
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

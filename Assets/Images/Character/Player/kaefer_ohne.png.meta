@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kaefer_ohne_0: -8449576929313595226
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

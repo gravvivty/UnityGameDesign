@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      village_curtain_floor_0: -422948773305535518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
