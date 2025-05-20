@@ -21,7 +21,7 @@ namespace Project.Interactable.NPC
         {
             base.Update();
             // Check if the player is close enough to interact with the NPC
-            if (!IsPlayerClose())
+            if (DialogueManager.Instance.CurrentSpeakingNPC == this && !IsPlayerClose())
             {
                 DialogueManager.Instance.EndDialogue();
             }
@@ -35,7 +35,7 @@ namespace Project.Interactable.NPC
                 return;
             }
 
-            DialogueManager.Instance.StartDialogue(dialogueData, initialDialogueID, transform.position);
+            DialogueManager.Instance.StartDialogue(dialogueData, initialDialogueID, this);
         }
 
         private bool IsPlayerClose()

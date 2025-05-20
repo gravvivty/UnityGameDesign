@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      curtain_rod_only_0: -1150270649588586700
+      curtain_rod_only_1: 5718892784850508958
+      curtain_rod_only_2: -990967933327969647
+      curtain_rod_only_3: -8618860792386827837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

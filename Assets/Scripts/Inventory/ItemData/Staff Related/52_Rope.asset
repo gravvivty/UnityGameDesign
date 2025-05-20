@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
-  m_Name: 35_Rope
+  m_Name: 52_Rope
   m_EditorClassIdentifier: 
   itemName: Rope
-  itemID: 35
+  itemID: 52
   description: A rope. Useful to tie objects together.
-  icon: {fileID: -7509877173097914863, guid: 9f747527d8fcba64591a25ddc973e32a, type: 3}
-  possibleCombinations: []
+  icon: {fileID: 5479112383841026743, guid: 15072b4f27c1d7347b55a25681a30310, type: 3}
+  possibleCombinations:
+  - otherItemID: 51
+    resultItem: {fileID: 11400000, guid: 8e09d81f270179a4481f04b90275a234, type: 2}
+  - otherItemID: 50
+    resultItem: {fileID: 11400000, guid: f97587bb69fe7744ca121cf784a9a71d, type: 2}

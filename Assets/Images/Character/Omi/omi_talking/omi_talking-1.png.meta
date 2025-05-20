@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fb5a1bab72d0f344298431877e12d9b7
+guid: ee8a00ddaecf9fd42ae1cfa8c1ee6176
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2252591348678732017
-    second: Stage02_interior_0
+      213: 5384086486473364878
+    second: omi_talking-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stage02_interior_0
+      name: omi_talking-1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3840
-        height: 2160
+        x: 506
+        y: 79
+        width: 1017
+        height: 1918
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f82d1a95efc24f10800000000000000
-      internalID: 2252591348678732017
+      spriteID: e85d932222e18ba40800000000000000
+      internalID: 5384086486473364878
       vertices: []
       indices: 
       edges: []

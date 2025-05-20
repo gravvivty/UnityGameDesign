@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      village_leftdoor_closed_0: -2173935961939286559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

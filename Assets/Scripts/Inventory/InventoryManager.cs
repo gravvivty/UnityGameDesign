@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Mono.Cecil;
 
 namespace Project.Inventory
 {
@@ -10,7 +11,7 @@ namespace Project.Inventory
     {
         public static InventoryManager Instance { get; private set; }
 
-        private List<ItemData> items = new List<ItemData>();
+        [SerializeField] private List<ItemData> items = new List<ItemData>();
 
         private void Awake()
         {
@@ -22,6 +23,8 @@ namespace Project.Inventory
             {
                 Destroy(gameObject);
             }
+            DontDestroyOnLoad(gameObject);
+
         }
 
         /// <summary>
@@ -77,7 +80,7 @@ namespace Project.Inventory
         {
             return new List<ItemData>(items);
         }
-        
+
         public void RemoveItem(ItemData item)
         {
             if (items.Contains(item))

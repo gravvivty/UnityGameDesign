@@ -22,7 +22,7 @@ namespace Project.Dialogue
             if (CheckConditions(dialogue.Conditions) == false)
             {
                 Debug.Log("Dialogue conditions not met, skipping dialogue.");
-                dialogueText.text = "I cannot speak to you yet.";
+                dialogueText.text = "...";
                 return;
             }
             DisplayChoices(dialogue.Choices);

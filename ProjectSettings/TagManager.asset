@@ -60,14 +60,14 @@ TagManager:
   - name: NPC
     uniqueID: 2612552603
     locked: 0
-  - name: Item
-    uniqueID: 207057707
-    locked: 0
   - name: Dialogue
     uniqueID: 4088183047
     locked: 0
   - name: Objects
     uniqueID: 1234456679
+    locked: 0
+  - name: Item
+    uniqueID: 207057707
     locked: 0
   - name: PlayerAbove
     uniqueID: 4257416075

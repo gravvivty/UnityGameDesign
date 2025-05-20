@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
+  m_Name: 50_GlassShard
+  m_EditorClassIdentifier: 
+  itemName: Glasscherbe
+  itemID: 50
+  description: "Eine gl\xE4nzede Glasscherbe"
+  icon: {fileID: 8441478620700924350, guid: 0eeb2e0585bfd7c4eb9b6ed326194c24, type: 3}
+  possibleCombinations:
+  - otherItemID: 52
+    resultItem: {fileID: 11400000, guid: f97587bb69fe7744ca121cf784a9a71d, type: 2}
+  - otherItemID: 55
+    resultItem: {fileID: 11400000, guid: ac97b48243cdb004e9ceb242734fcad9, type: 2}

@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
-  m_Name: 53_Well
+  m_Name: 51_Rod
   m_EditorClassIdentifier: 
-  itemName: Well
-  itemID: 53
-  description: Peculiar Well
-  icon: {fileID: 1446053652404568053, guid: 4c121a09effe06e409492b888c2d7f49, type: 3}
+  itemName: Rod
+  itemID: 51
+  description: A long rod.
+  icon: {fileID: -1150270649588586700, guid: cb61e28a5cc6a9c46a4f1bf43df7112f, type: 3}
   possibleCombinations:
-  - otherItemID: 1
-    resultItem: {fileID: 11400000, guid: 03fd241930a7c1f48b64ef97ec4681eb, type: 2}
+  - otherItemID: 52
+    resultItem: {fileID: 11400000, guid: 8e09d81f270179a4481f04b90275a234, type: 2}
+  - otherItemID: 54
+    resultItem: {fileID: 11400000, guid: ac97b48243cdb004e9ceb242734fcad9, type: 2}

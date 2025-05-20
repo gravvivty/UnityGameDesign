@@ -7,8 +7,8 @@ namespace Project.Helper
     /// </summary>
     public class SpriteOutline : MonoBehaviour
     {
-        [SerializeField] private Color outlineColor = Color.red;
-        [SerializeField] private float outlineSize = 1.1f;
+        [SerializeField] private Color outlineColor = new Color(0, 1, 0, 1);
+        [SerializeField] private float outlineSize = 1.05f;
 
         private SpriteRenderer outlineRenderer;
         private SpriteRenderer mainRenderer;
@@ -23,10 +23,13 @@ namespace Project.Helper
             GameObject outlineObject = new GameObject("Outline");
             outlineObject.transform.parent = transform;
             outlineObject.transform.localPosition = Vector3.zero;
+            outlineObject.transform.localRotation = Quaternion.identity;
+            //outlineObject.transform.localScale = Vector3.one;
 
             // Add and setup outline sprite renderer
             outlineRenderer = outlineObject.AddComponent<SpriteRenderer>();
             mainRenderer = GetComponent<SpriteRenderer>();
+            outlineRenderer.material = new Material(Shader.Find("Unlit/SolidColorShader"));
 
             // Copy sprite and sorting properties
             outlineRenderer.sprite = mainRenderer.sprite;

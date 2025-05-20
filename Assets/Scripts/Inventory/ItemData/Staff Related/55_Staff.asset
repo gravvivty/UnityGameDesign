@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
-  m_Name: 54_WellRope
+  m_Name: 55_Staff
   m_EditorClassIdentifier: 
-  itemName: WellRope
-  itemID: 54
-  description: Well with Rope
-  icon: {fileID: -7509877173097914863, guid: a2386aeb7701a0c41925e2e54ef4ea82, type: 3}
-  possibleCombinations: []
+  itemName: 5
+  itemID: 55
+  description: A Magical Staff. Perhaps with the UNMATCHED POWER OF THE SUN it can
+    set stuff on fire
+  icon: {fileID: -3668211228440283807, guid: 71644641615b0b744b114bb449cec556, type: 3}
+  possibleCombinations:
+  - otherItemID: 0
+    resultItem: {fileID: 0}
