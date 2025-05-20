@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: A Rod tied with a rope
   itemID: 55
-  description: A rod tied with a rope. Something could perhaps be attached to this
+  description: "A rod tied with a rope - \ncould this be... nunchucks?!"
   icon: {fileID: -4885112599345909311, guid: 5bcdcbf83bcabee4c984fcbcd662dd10, type: 3}
   possibleCombinations:
   - otherItemID: 50

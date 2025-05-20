@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Rope
   itemID: 52
-  description: A rope. Useful to tie objects together.
+  description: 'An old rope from the local well -
+
+    could still be used'
   icon: {fileID: 7556121490659006303, guid: a32bb98a35d891046881812d848b9cb4, type: 3}
   possibleCombinations:
   - otherItemID: 51

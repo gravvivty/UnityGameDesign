@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Tied Glass Shard
   itemID: 54
-  description: A glass shard tied with a rope. Could perhaps be attached to other
-    objects
+  description: 'A glass shard tied to a rope. -
+
+    seems a bit dangerous no?'
   icon: {fileID: 715678414299527877, guid: b7169e45b4aee5b4dace985c5ce695d2, type: 3}
   possibleCombinations:
   - otherItemID: 51

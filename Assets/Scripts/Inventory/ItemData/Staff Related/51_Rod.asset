@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Rod
   itemID: 51
-  description: A long rod.
+  description: "A long sturdy rod - \ngreat for travels"
   icon: {fileID: 5734253761111765231, guid: 3a72069e968071e449d7dd99acafc52e, type: 3}
   possibleCombinations:
   - otherItemID: 52

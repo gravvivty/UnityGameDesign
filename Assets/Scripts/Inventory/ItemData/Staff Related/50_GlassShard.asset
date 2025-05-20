@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
   m_Name: 50_GlassShard
   m_EditorClassIdentifier: 
-  itemName: Glasscherbe
+  itemName: Shard of Glass
   itemID: 50
-  description: "Eine gl\xE4nzede Glasscherbe"
+  description: 'A sparkling shard of glass -
+
+    you can see yourself in it'
   icon: {fileID: 8441478620700924350, guid: 0eeb2e0585bfd7c4eb9b6ed326194c24, type: 3}
   possibleCombinations:
   - otherItemID: 52

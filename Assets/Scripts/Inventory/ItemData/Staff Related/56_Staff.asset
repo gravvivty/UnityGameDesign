@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Staff
   itemID: 56
-  description: "A Magical Staff. Perhaps with the \nUNMATCHED POWER OF THE SUN \nit
-    can set stuff on fire"
+  description: "A Magical Staff containing the \nUNMATCHED POWER OF THE SUN -\ntry
+    not to burn anything"
   icon: {fileID: -6465342218107475841, guid: b5038b7acc960d34fbff1c58cd586365, type: 3}
   possibleCombinations:
   - otherItemID: 57
