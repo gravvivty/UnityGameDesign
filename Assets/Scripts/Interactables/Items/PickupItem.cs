@@ -23,10 +23,6 @@ namespace Project.Interactable.Items
             base.Start();
             
             spriteRenderer = GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null && itemData != null && itemData.icon != null)
-            {
-                spriteRenderer.sprite = itemData.icon;
-            }
         }
         
         /// <summary>
@@ -35,6 +31,12 @@ namespace Project.Interactable.Items
         /// </summary>
         protected override void Interact()
         {
+            
+            if (spriteRenderer != null && itemData != null && itemData.icon != null)
+            {
+                spriteRenderer.sprite = itemData.icon;
+            }
+            
             InventoryManager.Instance.AddItem(itemData);
             gameObject.SetActive(false);
 

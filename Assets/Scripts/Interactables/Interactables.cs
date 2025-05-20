@@ -1,5 +1,6 @@
 using UnityEngine;
 using Project.Helper;
+using Project.Inventory;
 
 namespace Project.Interactable
 {

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -104,6 +105,24 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         // Hide drag image
         dragImage.enabled = false;
+        
+        // Raycast to check if dropped on a world object
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(worldPos, Vector2.zero);
+
+        foreach (var hit in hits)
+        {
+            var receiver = hit.collider?.GetComponent<ItemReceiver>();
+            if (receiver != null)
+            {
+                if (receiver.TryUseItem(itemData))
+                {
+                    InventoryManager.Instance.RemoveItem(itemData);
+                    InventoryUI.Instance.UpdateInventoryUI();
+                    return;
+                }
+            }
+        }
     }
 
     public void OnDrop(PointerEventData eventData)
