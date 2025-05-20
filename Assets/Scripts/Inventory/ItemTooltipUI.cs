@@ -18,36 +18,20 @@ public class TooltipUI : MonoBehaviour
         {
             canvasGroup.blocksRaycasts = false;
         }
-        
-        // Make sure tooltipObject is active so it can receive updates and pointer events
+
+        // Activate tooltip object, but start hidden
         tooltipObject.SetActive(true);
-        tooltipObject.GetComponent<Image>().enabled = false;
-        foreach (Transform child in tooltipObject.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        SetShow(false);  // Instead of manually disabling stuff
     }
 
     private void Update()
     {
-        if (canvasGroup != null)
+        if (canvasGroup != null && showTooltip)
         {
             Vector2 cursorPosition = Input.mousePosition;
             RectTransform tooltipRect = tooltipObject.GetComponent<RectTransform>();
 
-            // Offset to the right and slightly upward
-            Vector2 offset = new Vector2(tooltipRect.rect.width * 0.6f, tooltipRect.rect.height * 0.1f);
-            tooltipObject.transform.position = cursorPosition + offset;
-
-            // to bypass the 1 frame flicker tooltip at original pos, doesnt work tho
-            if (showTooltip)
-            {
-                tooltipObject.GetComponent<Image>().enabled = true;
-                foreach (Transform child in tooltipObject.transform)
-                {
-                    child.gameObject.SetActive(true);
-                }
-            }
+            tooltipObject.transform.position = cursorPosition;
         }
     }
 
@@ -61,5 +45,15 @@ public class TooltipUI : MonoBehaviour
     public void SetShow(bool show)
     {
         showTooltip = show;
+
+        if (tooltipObject != null)
+        {
+            tooltipObject.GetComponent<Image>().enabled = show;
+
+            foreach (Transform child in tooltipObject.transform)
+            {
+                child.gameObject.SetActive(show);
+            }
+        }
     }
 }
