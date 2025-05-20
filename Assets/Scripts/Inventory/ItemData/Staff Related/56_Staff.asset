@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
-  m_Name: 23_George
+  m_Name: 56_Staff
   m_EditorClassIdentifier: 
-  itemName: George
-  itemID: 23
-  description: Uh oh... you've done it now. Run.
-  icon: {fileID: 4839418475635104665, guid: 2397a8c98cf3c024d8ff83fee86962e0, type: 3}
-  possibleCombinations: []
+  itemName: Staff
+  itemID: 56
+  description: "A Magical Staff. Perhaps with the \nUNMATCHED POWER OF THE SUN \nit
+    can set stuff on fire"
+  icon: {fileID: -6465342218107475841, guid: b5038b7acc960d34fbff1c58cd586365, type: 3}
+  possibleCombinations:
+  - otherItemID: 57
+    resultItem: {fileID: 11400000, guid: 5cbbb81c839f4fc47956aa798e0f6a68, type: 2}

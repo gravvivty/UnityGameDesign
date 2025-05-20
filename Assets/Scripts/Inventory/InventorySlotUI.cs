@@ -117,8 +117,11 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             {
                 if (receiver.TryUseItem(itemData))
                 {
-                    InventoryManager.Instance.RemoveItem(itemData);
-                    InventoryUI.Instance.UpdateInventoryUI();
+                    if (itemData.itemName != "Staff")
+                    {
+                        InventoryManager.Instance.RemoveItem(itemData);
+                        InventoryUI.Instance.UpdateInventoryUI();
+                    }
                     return;
                 }
             }
