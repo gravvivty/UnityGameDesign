@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      waechter_talking-2_0: 3654415056815286429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

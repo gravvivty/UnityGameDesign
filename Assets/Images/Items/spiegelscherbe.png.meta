@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spiegelscherbe_0: 8441478620700924350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stab_mit_scherbe_0: -5819642667675361450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

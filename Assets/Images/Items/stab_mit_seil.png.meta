@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stab_mit_seil_0: -4885112599345909311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

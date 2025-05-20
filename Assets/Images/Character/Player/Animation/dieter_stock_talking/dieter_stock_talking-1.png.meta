@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dieter_stock_talking-1_0: 7104839738075062326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

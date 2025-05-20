@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      scherbe_mit_seil_0: 715678414299527877
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
