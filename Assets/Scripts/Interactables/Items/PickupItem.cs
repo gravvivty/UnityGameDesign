@@ -38,7 +38,7 @@ namespace Project.Interactable.Items
             }
             
             InventoryManager.Instance.AddItem(itemData);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
 
             // Call the UpdateInventoryUI() method to update the UI when an item is picked up
             InventoryUI inventoryUI = FindFirstObjectByType<InventoryUI>(); // Find the InventoryUI component

@@ -7,7 +7,7 @@ namespace Project.Interactable.InSceneInteract
 {
     public class DoorReceiver : ItemReceiver
     {
-        public bool isLocked = false;
+        public bool isLocked = true;
         public string sceneToLoad;
         public override bool TryUseItem(ItemData draggedItem)
         {
