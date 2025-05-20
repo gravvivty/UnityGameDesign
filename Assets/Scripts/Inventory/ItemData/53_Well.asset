@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
-  m_Name: 1_Glorp
+  m_Name: 53_Well
   m_EditorClassIdentifier: 
-  itemName: Glorp
-  itemID: 1
-  description: Glorp the succulent, might be useful for a lonely night...
-  icon: {fileID: 7035699271571955438, guid: 33b8f997a19fbcf42bdda207e48c7b09, type: 3}
+  itemName: Well
+  itemID: 53
+  description: Peculiar Well
+  icon: {fileID: 1446053652404568053, guid: 4c121a09effe06e409492b888c2d7f49, type: 3}
   possibleCombinations:
-  - otherItemID: 2
-    resultItem: {fileID: 11400000, guid: 3886f394bafc1494a9c3c772fdbd765e, type: 2}
-  - otherItemID: 53
+  - otherItemID: 1
     resultItem: {fileID: 11400000, guid: 03fd241930a7c1f48b64ef97ec4681eb, type: 2}
