@@ -6,7 +6,7 @@ public class Slideshow : MonoBehaviour
 {
     public Image slideshowImage;
     public Sprite[] slides;
-    public float delay = 5f;
+    public float delay = 4f;
     public float lastSlideDelay = 20f;
     public string sceneToLoad;
 
