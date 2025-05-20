@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: BurningCurtain
   itemID: 58
   description: It is burning!!!
-  icon: {fileID: 4839418475635104665, guid: 2397a8c98cf3c024d8ff83fee86962e0, type: 3}
+  icon: {fileID: 6952255750235482898, guid: fe548edf8ce328144858ae8ece19c813, type: 3}
   possibleCombinations: []
