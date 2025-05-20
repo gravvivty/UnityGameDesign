@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Rod
   itemID: 51
   description: A long rod.
-  icon: {fileID: -1150270649588586700, guid: cb61e28a5cc6a9c46a4f1bf43df7112f, type: 3}
+  icon: {fileID: 5734253761111765231, guid: 3a72069e968071e449d7dd99acafc52e, type: 3}
   possibleCombinations:
   - otherItemID: 52
     resultItem: {fileID: 11400000, guid: 8e09d81f270179a4481f04b90275a234, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Rope
   itemID: 52
   description: A rope. Useful to tie objects together.
-  icon: {fileID: 9165137999171360240, guid: 85bc108611bbe7f48ad79499f03158f8, type: 3}
+  icon: {fileID: 7556121490659006303, guid: a32bb98a35d891046881812d848b9cb4, type: 3}
   possibleCombinations:
   - otherItemID: 51
     resultItem: {fileID: 11400000, guid: 8e09d81f270179a4481f04b90275a234, type: 2}
