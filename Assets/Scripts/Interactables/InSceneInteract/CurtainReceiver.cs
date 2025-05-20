@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Project.Interactable.InSceneInteract
 {
-    public class WellReceiver : ItemReceiver
+    public class CurtainReceiver : ItemReceiver
     {
         public override bool TryUseItem(ItemData draggedItem)
         {
@@ -14,23 +14,19 @@ namespace Project.Interactable.InSceneInteract
                 Debug.Log($"Combined {draggedItem.itemName} with {itemRepresentation.itemName} to get {result.itemName}");
                 
                 // CUSTOM LOGIC -----
-                if (spriteRenderer != null && itemRepresentation.itemName == "Well")
+                if (spriteRenderer != null && draggedItem.itemID == 56)
                 {
                     itemRepresentation = result;
                     spriteRenderer.sprite = itemRepresentation.icon;
-                }
-                if (spriteRenderer != null && itemRepresentation.itemName == "WellRope")
-                {
-                    itemRepresentation = result;
-                    spriteRenderer.sprite = itemRepresentation.icon;
-                    // Do something else idk, add something to  the inventory or sum shit
+
+                    Debug.Log("IT BUUUURNS!!!");
                 }
 
                 return true;
                 // CUSTOM LOGIC ----
             }
 
-            Debug.Log("Can't use this item on the Well.");
+            Debug.Log("Can't use this item on the Curtain.");
             return false;
         }
     }
