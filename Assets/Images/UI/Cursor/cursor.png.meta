@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2397a8c98cf3c024d8ff83fee86962e0
+guid: ae5915cd39eced04c998b18673b761de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4839418475635104665
-    second: George_0
+      213: 6554736390298987251
+    second: cursor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: George_0
+      name: cursor_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 680
-        height: 624
+        width: 39
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99b51b79671192340800000000000000
-      internalID: 4839418475635104665
+      spriteID: 3fae81cb40a17fa50800000000000000
+      internalID: 6554736390298987251
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      George_0: 4839418475635104665
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

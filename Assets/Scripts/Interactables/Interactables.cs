@@ -15,6 +15,7 @@ namespace Project.Interactable
         private bool isHighlighted = false;
         private bool waitingForPlayerToGetClose = false;
         private float minInteractionDistance = 5f;
+        private GameObject hoveredObject;
 
         protected virtual void Start()
         {
@@ -24,7 +25,7 @@ namespace Project.Interactable
 
         protected virtual void Update()
         {
-            GameObject hoveredObject = mouseRaycast.GetGameObject();
+            hoveredObject = mouseRaycast.GetGameObject();
             bool shouldHighlight = false;
 
             if (hoveredObject != null)
@@ -72,6 +73,26 @@ namespace Project.Interactable
                 spriteOutline.ShowOutline(shouldHighlight);
                 isHighlighted = shouldHighlight;
             }
+            
+            if (shouldHighlight && hoveredObject.CompareTag("Door"))
+            {
+                CursorManager.Instance.SetDoorCursor();
+            } else if (shouldHighlight && hoveredObject.CompareTag("NPC"))
+            {
+                CursorManager.Instance.SetDialogueCursor();
+            } else if (shouldHighlight && hoveredObject.CompareTag("Item"))
+            {
+                CursorManager.Instance.SetGrabCursor();
+            } else if (shouldHighlight && hoveredObject.CompareTag("Put"))
+            {
+                CursorManager.Instance.SetPutCursor();
+            }
+            else
+            {
+                CursorManager.Instance.SetNormalCursor();
+            }
+            
+            hoveredObject = null;
         }
 
         protected abstract void Interact();

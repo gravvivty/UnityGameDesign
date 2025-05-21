@@ -8,6 +8,9 @@ TagManager:
   - Dialogue
   - Mouse
   - Item
+  - Door
+  - NPC
+  - Put
   layers:
   - Default
   - TransparentFX
