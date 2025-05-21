@@ -54,6 +54,9 @@ TagManager:
   - name: Ground
     uniqueID: 3930634127
     locked: 0
+  - name: BackgroundDeco
+    uniqueID: 1637755461
+    locked: 0
   - name: PlayerBelow
     uniqueID: 2274414727
     locked: 0

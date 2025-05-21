@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 714757340afa0fe46af30ff6817ad716
+guid: abe16e58c4f3b6f468da79c2642e57d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7104839738075062326
-    second: dieter_stock_talking-1_0
+      213: 7626537282545239136
+    second: dieter_walking-2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dieter_stock_talking-1_0
+      name: dieter_walking-2_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 34
-        width: 693
+        x: 18
+        y: 24
+        width: 706
         height: 1120
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6302b064916799260800000000000000
-      internalID: 7104839738075062326
+      spriteID: 064c1685047e6d960800000000000000
+      internalID: 7626537282545239136
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e5efe5d7e21aa1e47a7358c3c1760378
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dieter_stock_talking-1_0: 7104839738075062326
+      dieter_walking-2_0: 7626537282545239136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
