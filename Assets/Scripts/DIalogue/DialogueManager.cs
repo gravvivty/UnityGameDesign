@@ -38,6 +38,9 @@ namespace Project.Dialogue
 
             if (dialogueData == null || dialogueID == "") return;
             currentSpeakingNPC = speaker;
+            
+            currentSpeakingNPC.PlayTalkingAnimation();
+            
             var dialogeUIObject = Instantiate(dialogueUI);
             currentDialogueUIObject = dialogeUIObject.gameObject;
             currentDialogueData = dialogueData;
@@ -53,6 +56,12 @@ namespace Project.Dialogue
         public void EndDialogue()
         {
             Debug.Log($"Ending dialogue {currentDialogue?.DialogueID}");
+            
+            if (currentSpeakingNPC != null)
+            {
+                currentSpeakingNPC.StopTalkingAnimation();
+            }
+            
             if (currentDialogueUIObject != null)
             {
                 Destroy(currentDialogueUIObject);

@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Project.Dialogue;
 using Project.Dialogue.Data;
+using UnityEngine.AI;
 
 namespace Project.Interactable.NPC
 {
@@ -9,11 +10,28 @@ namespace Project.Interactable.NPC
     {
         [SerializeField] private DialogueData dialogueData;
         [SerializeField] private string initialDialogueID;
-
+        [SerializeField] private Animator animator;
+        
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         protected override void Start()
         {
             base.Start();
+        }
+        
+        public void PlayTalkingAnimation()
+        {
+            if (animator != null)
+            {
+                animator.SetBool("Talking", true);
+            }
+        }
+        
+        public void StopTalkingAnimation()
+        {
+            if (animator != null)
+            {
+                animator.SetBool("Talking", false);
+            }
         }
 
         // Update is called once per frame

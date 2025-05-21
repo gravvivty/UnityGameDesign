@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: mouseRaycast
       value: 
       objectReference: {fileID: 2595157172694635225}
+    - target: {fileID: 4071542073435890612, guid: 0b2ab6498bb791d46b80e6574e66209d, type: 3}
+      propertyPath: minDistanceToInteractable
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7008059151252706991, guid: 0b2ab6498bb791d46b80e6574e66209d, type: 3}
       propertyPath: m_Name
       value: Player

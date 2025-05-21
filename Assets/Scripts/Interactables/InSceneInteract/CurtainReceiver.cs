@@ -1,4 +1,5 @@
-﻿using Project.Inventory;
+﻿using System.Collections;
+using Project.Inventory;
 using UnityEngine;
 
 namespace Project.Interactable.InSceneInteract
@@ -6,6 +7,9 @@ namespace Project.Interactable.InSceneInteract
     public class CurtainReceiver : ItemReceiver
     {
         public GameObject fire;
+        public GameObject guard;
+        public GameObject omi_curtain;
+        public GameObject omi;
         public override bool TryUseItem(ItemData draggedItem)
         {
             if (PlayerPrefs.GetInt("isLit", 0) == 1)
@@ -29,6 +33,9 @@ namespace Project.Interactable.InSceneInteract
                         fire.GetComponent<Animator>().SetBool("isLit", true);
                         PlayerPrefs.SetInt("isLit", 1);
                         PlayerPrefs.Save();
+
+                        StartCoroutine(wait());
+                        
                         Debug.Log("IT BUUUURNS!!!");
                         return true;
                     }
@@ -37,6 +44,15 @@ namespace Project.Interactable.InSceneInteract
                 }
             }
             return false;
+        }
+
+        private IEnumerator wait()
+        {
+            yield return new WaitForSeconds(2f);
+            omi_curtain.GetComponent<Animator>().SetBool("Panic", true);
+            yield return new WaitForSeconds(1f);
+            guard.GetComponent<NPCMovement>().WalkTo(new Vector2(-10,-3.5f));
+
         }
     }
 }
