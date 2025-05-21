@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6ee7990d540654e85536586f61e53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: LevelSelector
+  sceneToLoad: CutsceneStart
 --- !u!1 &317078502
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 592708018}
   - component: {fileID: 592708017}
   m_Layer: 5
-  m_Name: Settings Button
+  m_Name: Level2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3703560851184227629, guid: a9cc0b288cc2bbc45b01567d8f561286, type: 3}
+  m_Sprite: {fileID: 481476202430425671, guid: 47da71c32972fe74c84670aa0e9356b4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 683953885}
   - component: {fileID: 683953884}
   m_Layer: 5
-  m_Name: Play Button
+  m_Name: Level1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1114779252266117804, guid: 56e2d7ca5ce5e2240ae50d00131099f6, type: 3}
+  m_Sprite: {fileID: 4580268938923087641, guid: 4335b00644186804ea98cf6dfe1ef8ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1180,7 +1180,7 @@ GameObject:
   - component: {fileID: 1384074147}
   - component: {fileID: 1384074146}
   m_Layer: 5
-  m_Name: Quit Button
+  m_Name: Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2098233075185703054, guid: 72ce2a843db1dc34698672d5e4293ed2, type: 3}
+  m_Sprite: {fileID: 6461078080524766490, guid: 152dedc15da35f445a4b8976e7f309a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
