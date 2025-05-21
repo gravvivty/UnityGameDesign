@@ -1,6 +1,7 @@
 using UnityEngine;
 using Project.Helper;
 using Project.Inventory;
+using Project.Player;
 
 namespace Project.Interactable
 {
@@ -41,14 +42,16 @@ namespace Project.Interactable
             // Check if we're waiting for player to get close
             if (waitingForPlayerToGetClose)
             {
-                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                PlayerMovement player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
                 if (player != null)
                 {
                     float distance = Vector3.Distance(transform.position, player.transform.position);
-                    if (distance <= minInteractionDistance)
+                    if (distance <= player.GetMinDistanceToInteractable())
                     {
+                        // Stop waiting for player to get close and start interaction
                         waitingForPlayerToGetClose = false;
                         Interact();
+                        player.ResetMinDistanceToInteractable();
                     }
                 }
             }

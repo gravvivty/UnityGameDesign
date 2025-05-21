@@ -28,7 +28,7 @@ MonoBehaviour:
       NextDialogueID: 0_c-3
       Conditions:
       - Type: 0
-        ItemID: 55
+        ItemID: 56
     - Text: "Wir reden sp\xE4ter."
       NextDialogueID: 
       Conditions: []

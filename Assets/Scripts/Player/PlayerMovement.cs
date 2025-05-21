@@ -19,12 +19,35 @@ namespace Project.Player
         private bool isMoving = false;
         private Vector2 targetPosition;
         private GameObject currentInteractable;
+        private Rigidbody2D rb;
+
+
+        void Start()
+        {
+            rb = GetComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.gravityScale = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        }
 
         // Update is called once per frame
         void Update()
         {
             HandleMovement();
             CheckSpriteLayer();
+        }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("Ground"))
+            {
+                minDistanceToInteractable = 100f;
+                if (isMoving)
+                {
+                    isMoving = false;
+                }
+            }
         }
 
 
@@ -60,7 +83,6 @@ namespace Project.Player
             {
                 Vector2 currentPosition = transform.position;
                 transform.position = Vector2.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
-
                 // Check if we should stop based on the type of target
                 if (currentInteractable != null)
                 {
@@ -96,5 +118,22 @@ namespace Project.Player
                 }
             }
         }
+
+        /// <summary>
+        /// Returns the min distance the player needs to be to the interactable object.
+        /// </summary>
+        public float GetMinDistanceToInteractable()
+        {
+            return minDistanceToInteractable;
+        }
+
+        /// <summary>
+        /// Returns the min distance the player needs to be to the interactable object.
+        /// </summary>
+        public void ResetMinDistanceToInteractable()
+        {
+            minDistanceToInteractable = 5;
+        }
+
     }
 }
