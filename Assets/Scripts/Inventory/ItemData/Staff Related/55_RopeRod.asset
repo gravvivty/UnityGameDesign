@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Rod with a rope
   itemID: 55
   description: "A rod tied to a rope - \ncould this be... nunchucks?!"
-  icon: {fileID: -4885112599345909311, guid: 5bcdcbf83bcabee4c984fcbcd662dd10, type: 3}
+  icon: {fileID: -6210984969625029711, guid: 3ea2c290ad4713e4480804239eebd7a2, type: 3}
   possibleCombinations:
   - otherItemID: 50
     resultItem: {fileID: 11400000, guid: ac97b48243cdb004e9ceb242734fcad9, type: 2}

@@ -17,7 +17,7 @@ MonoBehaviour:
   description: 'A sparkling shard of glass -
 
     you can see yourself in it'
-  icon: {fileID: 8441478620700924350, guid: 0eeb2e0585bfd7c4eb9b6ed326194c24, type: 3}
+  icon: {fileID: 3891023795430930065, guid: 033f5b020970eae4c9c3635a9179173f, type: 3}
   possibleCombinations:
   - otherItemID: 52
     resultItem: {fileID: 11400000, guid: f97587bb69fe7744ca121cf784a9a71d, type: 2}

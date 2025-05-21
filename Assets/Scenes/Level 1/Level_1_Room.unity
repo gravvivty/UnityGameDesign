@@ -556,7 +556,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 32.100002, y: 14.9}
+  m_Size: {x: 40, y: 10}
   m_EdgeRadius: 0
 --- !u!212 &369872753
 SpriteRenderer:
@@ -1057,7 +1057,6 @@ MonoBehaviour:
   objectsToToggle:
   - {fileID: 1238020749}
   - {fileID: 182456069}
-  - {fileID: 2102089688}
   requiredItems:
   - {fileID: 11400000, guid: 0d3ed81abc49de14399be9a828798432, type: 2}
 --- !u!1 &1238020749
@@ -1948,7 +1947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2102089689
 Transform:
   m_ObjectHideFlags: 0

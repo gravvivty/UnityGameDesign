@@ -5,6 +5,7 @@ namespace Project.Interactable.InSceneInteract
 {
     public class CurtainReceiver : ItemReceiver
     {
+        public GameObject fire;
         public override bool TryUseItem(ItemData draggedItem)
         {
             // Check for a valid combination
@@ -17,7 +18,8 @@ namespace Project.Interactable.InSceneInteract
                 if (spriteRenderer != null && draggedItem.itemID == 56)
                 {
                     itemRepresentation = result;
-                    spriteRenderer.sprite = itemRepresentation.icon;
+                    
+                    fire.SetActive(true);
 
                     Debug.Log("IT BUUUURNS!!!");
                 }

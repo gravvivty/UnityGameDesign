@@ -17,7 +17,7 @@ MonoBehaviour:
   description: 'A glass shard tied to a rope. -
 
     seems a bit dangerous no?'
-  icon: {fileID: 715678414299527877, guid: b7169e45b4aee5b4dace985c5ce695d2, type: 3}
+  icon: {fileID: -8425140679221238383, guid: 51a801361f04436418edf9face84b27c, type: 3}
   possibleCombinations:
   - otherItemID: 51
     resultItem: {fileID: 11400000, guid: ac97b48243cdb004e9ceb242734fcad9, type: 2}
