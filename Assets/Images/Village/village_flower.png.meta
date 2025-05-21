@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 443c2f5c9d3ab5b408bcf933c773fa69
+guid: 21847022ae7a59d49ba10fd5d312c2f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6509767130808822632
-    second: village_flower_0
+      213: 1920840254603126331
+    second: village_flower 1_0
   - first:
-      213: -871697863477219075
-    second: village_flower_1
+      213: -4476632613611566543
+    second: village_flower 1_1
   - first:
-      213: -4438000501100677347
-    second: village_flower_2
+      213: 4942672097710453522
+    second: village_flower 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,24 +102,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: village_flower_0
+      name: village_flower 1_0
       rect:
         serializedVersion: 2
         x: 2501
@@ -134,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86baf5a17b6575a50800000000000000
-      internalID: 6509767130808822632
+      spriteID: b36e3e5d80238aa10800000000000000
+      internalID: 1920840254603126331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: village_flower_1
+      name: village_flower 1_1
       rect:
         serializedVersion: 2
         x: 2832
-        y: 818
+        y: 810
         width: 339
-        height: 378
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df039ff596b17e3f0800000000000000
-      internalID: -871697863477219075
+      spriteID: 13a01cb2b5ecfd1c0800000000000000
+      internalID: -4476632613611566543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: village_flower_2
+      name: village_flower 1_2
       rect:
         serializedVersion: 2
         x: 3139
@@ -178,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1773eace0e0962c0800000000000000
-      internalID: -4438000501100677347
+      spriteID: 2133441e516e79440800000000000000
+      internalID: 4942672097710453522
       vertices: []
       indices: 
       edges: []
@@ -198,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      village_flower_0: 6509767130808822632
-      village_flower_1: -871697863477219075
-      village_flower_2: -4438000501100677347
+      village_flower 1_0: 1920840254603126331
+      village_flower 1_1: -4476632613611566543
+      village_flower 1_2: 4942672097710453522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
