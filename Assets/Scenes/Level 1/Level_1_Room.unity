@@ -1058,6 +1058,7 @@ MonoBehaviour:
   - {fileID: 1238020749}
   - {fileID: 182456069}
   - {fileID: 2102089688}
+  - {fileID: 369872750}
   requiredItems:
   - {fileID: 11400000, guid: 0d3ed81abc49de14399be9a828798432, type: 2}
 --- !u!1 &1238020749
