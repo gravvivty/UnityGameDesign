@@ -161,8 +161,8 @@ MonoBehaviour:
   - {fileID: 545805847817437501, guid: f408fcbb191717e47a090048dc5dda41, type: 3}
   - {fileID: 110457910812584818, guid: 5485a133cafcdc34e89aa937b2cf0ea9, type: 3}
   - {fileID: 7215592914004681806, guid: 04ea62a49da130045857c44040449b81, type: 3}
-  delay: 5
-  lastSlideDelay: 20
+  delay: 2
+  lastSlideDelay: 10
   sceneToLoad: Level_1_Room
 --- !u!114 &480901006
 MonoBehaviour:
