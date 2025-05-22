@@ -82,8 +82,11 @@ namespace Project.Player
                     if (distanceToGround <= 5f)
                     {
                         isMoving = true;
+                    }else if(!interactable.CompareTag("Item"))
+                    {
+                        isMoving = true;
                     }
-                    else
+                    else if(interactable.CompareTag("Item"))
                     {
                         Debug.Log("Interactable too far from ground, skipping movement.");
                         interactable.ForceInteract(); // Instant Interact
