@@ -16,7 +16,7 @@ namespace Project.Scene.SceneControllerLvl1
 
         void Start()
         {
-            wait();
+            StartCoroutine(wait());
             if (PlayerPrefs.GetInt("isLit", 0) == 1)
             {
                 if (villageDoor != null)
@@ -29,14 +29,14 @@ namespace Project.Scene.SceneControllerLvl1
                 if (omi.activeSelf)
                 {
                     Animator omiAnimator = omi.GetComponent<Animator>();
-                    omiAnimator.SetBool("Panic", true);
-                    omiAnimator.Play("PanicOmi",0,0f);
+                    Debug.Log("PanicOmi? " + omiAnimator.HasState(0, Animator.StringToHash("PanicOmi")));
+                    omiAnimator.Play("PanicOmi", 0, 0f);
+                    Debug.Log("Current animation state: " + omiAnimator.GetCurrentAnimatorStateInfo(0).IsName("PanicOmi"));
                 }
 
                 if (omi_noCurtain.activeSelf)
                 {
                     Animator omiNoCurtainAnimator = omi_noCurtain.GetComponent<Animator>();
-                    omiNoCurtainAnimator.SetBool("Panic", true);
                     omiNoCurtainAnimator.Play("PanicOmi",0,0f);
                 }
                 guard.GetComponent<NPCMovement>().enabled = false;
@@ -57,6 +57,7 @@ namespace Project.Scene.SceneControllerLvl1
 
         IEnumerator wait()
         {
+            yield return null;
             yield return null;
         }
     }   
