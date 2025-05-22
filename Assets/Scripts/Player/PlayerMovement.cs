@@ -73,9 +73,21 @@ namespace Project.Player
                 }
                 else if (gameObjectHit != null && gameObjectHit.GetComponent<Interactables>() != null)
                 {
+                    Interactables interactable = gameObjectHit.GetComponent<Interactables>();
+                    float distanceToGround = GetDistanceToGround(gameObjectHit.transform);
+
                     targetPosition = (Vector2)gameObjectHit.transform.position;
                     currentInteractable = gameObjectHit;
-                    isMoving = true;
+
+                    if (distanceToGround <= 5f)
+                    {
+                        isMoving = true;
+                    }
+                    else
+                    {
+                        Debug.Log("Interactable too far from ground, skipping movement.");
+                        interactable.ForceInteract(); // Instant Interact
+                    }
                 }
             }
 
@@ -134,6 +146,22 @@ namespace Project.Player
         {
             minDistanceToInteractable = 5;
         }
+        
+        private float GetDistanceToGround(Transform target)
+        {
+            GameObject[] groundObjects = GameObject.FindGameObjectsWithTag("Ground");
+            float closestDistance = Mathf.Infinity;
 
+            foreach (GameObject ground in groundObjects)
+            {
+                float distance = Vector2.Distance(target.position, ground.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                }
+            }
+
+            return closestDistance;
+        }
     }
 }

@@ -94,6 +94,15 @@ namespace Project.Interactable
             
             hoveredObject = null;
         }
+        
+        /// <summary>
+        /// Allows forcing an interaction immediately, bypassing proximity logic.
+        /// </summary>
+        public void ForceInteract()
+        {
+            waitingForPlayerToGetClose = false;
+            Interact();
+        }
 
         protected abstract void Interact();
     }
