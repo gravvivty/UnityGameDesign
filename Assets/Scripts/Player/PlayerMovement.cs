@@ -166,5 +166,13 @@ namespace Project.Player
 
             return closestDistance;
         }
+        
+        public Vector2 GetMoveDirection()
+        {
+            if (isMoving)
+                return (targetPosition - (Vector2)transform.position).normalized;
+            else
+                return Vector2.zero;
+        }
     }
 }

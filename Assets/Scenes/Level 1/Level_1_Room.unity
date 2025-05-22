@@ -393,6 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 112831585}
+  playerMovement: {fileID: 1823998207}
 --- !u!95 &112831587
 Animator:
   serializedVersion: 7
@@ -3031,6 +3032,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786bef8d0a27c254ca2df4f98624a2e1, type: 3}
+--- !u!114 &1823998207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4071542073435890612, guid: 0b2ab6498bb791d46b80e6574e66209d, type: 3}
+  m_PrefabInstance: {fileID: 112831583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112831584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffcc32fb30f5924cb231ea091023c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1871080280
 GameObject:
   m_ObjectHideFlags: 0

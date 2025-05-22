@@ -4750,6 +4750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1883518988}
+  playerMovement: {fileID: 3633715807775903346}
 --- !u!1 &2046489605
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,6 +5201,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1883518990}
   m_SourcePrefab: {fileID: 100100000, guid: 0b2ab6498bb791d46b80e6574e66209d, type: 3}
+--- !u!114 &3633715807775903346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4071542073435890612, guid: 0b2ab6498bb791d46b80e6574e66209d, type: 3}
+  m_PrefabInstance: {fileID: 3633715807775903345}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883518977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffcc32fb30f5924cb231ea091023c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

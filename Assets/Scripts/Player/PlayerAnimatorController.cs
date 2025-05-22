@@ -1,3 +1,4 @@
+using Project.Player;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -7,6 +8,8 @@ public class PlayerAnimatorController : MonoBehaviour
     private Animator animator;
     private Vector3 lastPosition;
     private float movementThreshold = 0.01f; // Avoid false movement triggers
+    public PlayerMovement playerMovement;
+
 
     void Start()
     {
@@ -23,17 +26,16 @@ public class PlayerAnimatorController : MonoBehaviour
         Vector3 delta = currentPosition - lastPosition;
 
         float speed = delta.magnitude / Time.deltaTime;
-
-        // Optional: prevent jitter by zeroing out tiny values
         if (speed < movementThreshold)
             speed = 0f;
 
         animator.SetFloat("Speed", speed);
 
-        // Flip sprite on horizontal movement
-        if (delta.x > 0.01f)
+        // Flip based on movement direction instead of raw delta
+        Vector2 moveDir = playerMovement.GetMoveDirection();
+        if (moveDir.x > 0.01f)
             spriteRenderer.flipX = false;
-        else if (delta.x < -0.01f)
+        else if (moveDir.x < -0.01f)
             spriteRenderer.flipX = true;
 
         lastPosition = currentPosition;
