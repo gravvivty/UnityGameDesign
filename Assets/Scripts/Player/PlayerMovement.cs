@@ -74,22 +74,22 @@ namespace Project.Player
                 else if (gameObjectHit != null && gameObjectHit.GetComponent<Interactables>() != null)
                 {
                     Interactables interactable = gameObjectHit.GetComponent<Interactables>();
-                    float distanceToGround = GetDistanceToGround(gameObjectHit.transform);
 
                     targetPosition = (Vector2)gameObjectHit.transform.position;
                     currentInteractable = gameObjectHit;
 
-                    if (distanceToGround <= 5f)
-                    {
-                        isMoving = true;
-                    }else if(!interactable.CompareTag("Item"))
+                    if (IsNearGround(gameObjectHit.transform))
                     {
                         isMoving = true;
                     }
-                    else if(interactable.CompareTag("Item"))
+                    else if (!interactable.CompareTag("Item"))
+                    {
+                        isMoving = true;
+                    }
+                    else
                     {
                         Debug.Log("Interactable too far from ground, skipping movement.");
-                        interactable.ForceInteract(); // Instant Interact
+                        interactable.ForceInteract();
                     }
                 }
             }
@@ -150,21 +150,19 @@ namespace Project.Player
             minDistanceToInteractable = 5;
         }
         
-        private float GetDistanceToGround(Transform target)
+        private bool IsNearGround(Transform target)
         {
-            GameObject[] groundObjects = GameObject.FindGameObjectsWithTag("Ground");
-            float closestDistance = Mathf.Infinity;
+            Collider2D[] nearbyGround = Physics2D.OverlapCircleAll(target.position, 5f);
 
-            foreach (GameObject ground in groundObjects)
+            foreach (Collider2D col in nearbyGround)
             {
-                float distance = Vector2.Distance(target.position, ground.transform.position);
-                if (distance < closestDistance)
+                if (col.CompareTag("Ground"))
                 {
-                    closestDistance = distance;
+                    return true;
                 }
             }
 
-            return closestDistance;
+            return false;
         }
         
         public Vector2 GetMoveDirection()
