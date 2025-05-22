@@ -56,12 +56,17 @@ namespace Project.Helper
             }
         }
         
-        // Updates outline with animations
+        // Updates outline with animations + layer
         private void LateUpdate()
         {
             if (outlineRenderer != null && mainRenderer != null && outlineRenderer.gameObject.activeSelf)
             {
+                // Sync sprite
                 outlineRenderer.sprite = mainRenderer.sprite;
+
+                // Sync sorting layer and order
+                outlineRenderer.sortingLayerID = mainRenderer.sortingLayerID;
+                outlineRenderer.sortingOrder = mainRenderer.sortingOrder - 1;
             }
         }
     }

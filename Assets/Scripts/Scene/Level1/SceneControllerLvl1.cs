@@ -38,6 +38,7 @@ namespace Project.Scene.SceneControllerLvl1
                 Animator guardAnimator = guard.GetComponent<Animator>();
                 guardAnimator.Play("FireGuard",0,0f);
                 guard.transform.localPosition = new Vector3(-0.6f, 1.6f, 0f);
+                guard.GetComponent<SpriteRenderer>().sortingLayerName = "NPC";
             }
         }
 
