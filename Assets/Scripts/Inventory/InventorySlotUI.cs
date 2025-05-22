@@ -158,6 +158,9 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
                 // Refresh UI
                 FindFirstObjectByType<InventoryUI>().UpdateInventoryUI();
+                
+                isPointerOver = false;
+                HideTooltip();
             }
             else
             {

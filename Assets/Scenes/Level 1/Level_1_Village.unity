@@ -1092,6 +1092,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireGO: {fileID: 2046489605}
   player: {fileID: 1883518977}
+  omi: {fileID: 1527529867}
+  omi_noCurtain: {fileID: 396913690}
+  guard: {fileID: 1134908520}
   StaffAnim: {fileID: 9100000, guid: ae04e3965879ee24489a4e476883f102, type: 2}
 --- !u!4 &364316698
 Transform:
@@ -1881,7 +1884,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 780421984}
-  - component: {fileID: 780421986}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -1909,28 +1911,6 @@ Transform:
   - {fileID: 178271912}
   m_Father: {fileID: 523816880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &780421986
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780421983}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bb3a711acde78604e9fb25d362db0a19, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &802059520
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,9 +4846,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -37551221
-  m_SortingLayer: 10
-  m_SortingOrder: 0
+  m_SortingLayerID: -1346329213
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ae4eca49a5d721c418b103c156861e72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
