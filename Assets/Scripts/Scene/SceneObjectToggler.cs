@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using Project.Inventory;
 using UnityEngine;
@@ -11,21 +13,23 @@ namespace Project.Scene.SceneObjectToggler
         [SerializeField] private ItemData[] requiredItems;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Awake()
+        void Start()
+        {
+            StartCoroutine(DelayedCheck());
+        }
+
+        private void Update()
         {
             CheckItem();
         }
 
-        // Update is called once per frame
-        void Update()
+        private IEnumerator DelayedCheck()
         {
-            // if (InventoryManager.Instance.AddingItem == false)
-            //     return;
-
-            CheckItem();
+            yield return null; // Wait one frame
+            CheckItem();       
         }
 
-        private void CheckItem()
+        public void CheckItem()
         {
             // Check if the player has the required items
             if (!HasRequiredItems())
