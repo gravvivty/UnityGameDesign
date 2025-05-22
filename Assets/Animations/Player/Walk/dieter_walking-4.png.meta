@@ -119,10 +119,10 @@ TextureImporter:
       name: dieter_walking-4_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 29
-        width: 688
-        height: 1120
+        x: 0
+        y: 0
+        width: 758
+        height: 1185
       alignment: 9
       pivot: {x: 0.5, y: 0.57}
       border: {x: 0, y: 0, z: 0, w: 0}

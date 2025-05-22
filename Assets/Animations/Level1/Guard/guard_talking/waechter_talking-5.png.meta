@@ -116,12 +116,12 @@ TextureImporter:
       name: waechter_talking-5_0
       rect:
         serializedVersion: 2
-        x: 94
-        y: 31
-        width: 833
-        height: 1297
+        x: 0
+        y: 0
+        width: 992
+        height: 1404
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 250d7f503f3f60b4795c62e9e49b0d7a
     internalID: 0
     vertices: []
     indices: 

@@ -116,12 +116,12 @@ TextureImporter:
       name: waechter_feuer-4_0
       rect:
         serializedVersion: 2
-        x: 103
-        y: 56
-        width: 698
-        height: 1329
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 992
+        height: 1404
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 728cec7cd1e1f1f4dbf3a9c0f93d0320
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      waechter_feuer-4_0: -529571835739599822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

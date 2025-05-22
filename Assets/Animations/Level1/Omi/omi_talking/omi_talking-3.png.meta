@@ -116,12 +116,12 @@ TextureImporter:
       name: omi_talking-3_0
       rect:
         serializedVersion: 2
-        x: 506
-        y: 79
-        width: 1017
-        height: 1924
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1a5ce2c9f07321d4b8590695f4391c05
     internalID: 0
     vertices: []
     indices: 

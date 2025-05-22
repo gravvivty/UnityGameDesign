@@ -116,12 +116,12 @@ TextureImporter:
       name: omi_panic-3_0
       rect:
         serializedVersion: 2
-        x: 100
-        y: 76
-        width: 1793
-        height: 1872
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 59253c6052f81f147810e8ab708e13d0
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      omi_panic-3_0: 35900178660733989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
