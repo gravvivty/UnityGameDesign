@@ -73,25 +73,34 @@ namespace Project.Interactable
                 spriteOutline.ShowOutline(shouldHighlight);
                 isHighlighted = shouldHighlight;
             }
-            
-            if (shouldHighlight && hoveredObject.CompareTag("Door"))
+
+            if (shouldHighlight)
             {
-                CursorManager.Instance.SetDoorCursor();
-            } else if (shouldHighlight && hoveredObject.CompareTag("NPC"))
-            {
-                CursorManager.Instance.SetDialogueCursor();
-            } else if (shouldHighlight && hoveredObject.CompareTag("Item"))
-            {
-                CursorManager.Instance.SetGrabCursor();
-            } else if (shouldHighlight && hoveredObject.CompareTag("Put"))
-            {
-                CursorManager.Instance.SetPutCursor();
+                // Check tags only if we're actually hovering this object
+                switch (hoveredObject.tag)
+                {
+                    case "Door":
+                        CursorManager.Instance.SetDoorCursor();
+                        break;
+                    case "NPC":
+                        CursorManager.Instance.SetDialogueCursor();
+                        break;
+                    case "Item":
+                        CursorManager.Instance.SetGrabCursor();
+                        break;
+                    case "Put":
+                        CursorManager.Instance.SetPutCursor();
+                        break;
+                    default:
+                        CursorManager.Instance.SetNormalCursor();
+                        break;
+                }
             }
             else
             {
                 CursorManager.Instance.SetNormalCursor();
             }
-            
+
             hoveredObject = null;
         }
         
