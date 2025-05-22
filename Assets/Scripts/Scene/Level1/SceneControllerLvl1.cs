@@ -11,6 +11,7 @@ namespace Project.Scene.SceneControllerLvl1
         [SerializeField] private GameObject omi;
         [SerializeField] private GameObject omi_noCurtain;
         [SerializeField] private GameObject guard;
+        [SerializeField] private GameObject villageDoor;
         [SerializeField] private RuntimeAnimatorController StaffAnim;
 
         void Start()
@@ -18,6 +19,10 @@ namespace Project.Scene.SceneControllerLvl1
             wait();
             if (PlayerPrefs.GetInt("isLit", 0) == 1)
             {
+                if (villageDoor != null)
+                {
+                    villageDoor.SetActive(true);
+                }
                 fireGO.SetActive(true);
                 Animator fireAnimator = fireGO.GetComponent<Animator>();
                 fireAnimator.Play("FireIdle",0,0f);

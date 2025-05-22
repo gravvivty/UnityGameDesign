@@ -10,6 +10,7 @@ namespace Project.Interactable.InSceneInteract
         public GameObject guard;
         public GameObject omi_curtain;
         public GameObject omi;
+        public GameObject villageDoor;
         public override bool TryUseItem(ItemData draggedItem)
         {
             if (PlayerPrefs.GetInt("isLit", 0) == 1)
@@ -52,7 +53,7 @@ namespace Project.Interactable.InSceneInteract
             omi_curtain.GetComponent<Animator>().SetBool("Panic", true);
             yield return new WaitForSeconds(1f);
             guard.GetComponent<NPCMovement>().WalkTo(new Vector2(-10,-3.5f));
-
+            villageDoor.SetActive(true);
         }
     }
 }
