@@ -55,5 +55,14 @@ namespace Project.Helper
                 }
             }
         }
+        
+        // Updates outline with animations
+        private void LateUpdate()
+        {
+            if (outlineRenderer != null && mainRenderer != null && outlineRenderer.gameObject.activeSelf)
+            {
+                outlineRenderer.sprite = mainRenderer.sprite;
+            }
+        }
     }
 }
