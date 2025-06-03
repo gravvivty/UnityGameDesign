@@ -16,3 +16,6 @@ One day he noticed something strange in the bushes around his school and investi
 To his surprise, he's found a magical item! - a shard of glass  <br>
 With this newfound power and knowledge of a world greater than him, he travels to foreign lands within the forest
 and makes haste for a great adventure through the woods.
+
+![Demo](Assets/Images/Prototype/showcaseUnity.gif)
+
