@@ -12,19 +12,42 @@ namespace Project.Player
     {
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private MouseRaycast mouseRaycast;
-        [SerializeField] private float moveSpeed = 2f;
+        [SerializeField] private float moveSpeed = 5f;
         [SerializeField] private float valueAboveGround = 0f;
         [SerializeField] private float minDistanceToInteractable = 5f;
 
         private bool isMoving = false;
         private Vector2 targetPosition;
         private GameObject currentInteractable;
+        private Rigidbody2D rb;
+
+
+        void Start()
+        {
+            rb = GetComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.gravityScale = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        }
 
         // Update is called once per frame
         void Update()
         {
             HandleMovement();
             CheckSpriteLayer();
+        }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("Ground"))
+            {
+                minDistanceToInteractable = 100f;
+                if (isMoving)
+                {
+                    isMoving = false;
+                }
+            }
         }
 
 
@@ -50,9 +73,24 @@ namespace Project.Player
                 }
                 else if (gameObjectHit != null && gameObjectHit.GetComponent<Interactables>() != null)
                 {
+                    Interactables interactable = gameObjectHit.GetComponent<Interactables>();
+
                     targetPosition = (Vector2)gameObjectHit.transform.position;
                     currentInteractable = gameObjectHit;
-                    isMoving = true;
+
+                    if (IsNearGround(gameObjectHit.transform))
+                    {
+                        isMoving = true;
+                    }
+                    else if (!interactable.CompareTag("Item"))
+                    {
+                        isMoving = true;
+                    }
+                    else
+                    {
+                        Debug.Log("Interactable too far from ground, skipping movement.");
+                        interactable.ForceInteract();
+                    }
                 }
             }
 
@@ -60,7 +98,6 @@ namespace Project.Player
             {
                 Vector2 currentPosition = transform.position;
                 transform.position = Vector2.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
-
                 // Check if we should stop based on the type of target
                 if (currentInteractable != null)
                 {
@@ -95,6 +132,45 @@ namespace Project.Player
                     spriteRenderer.sortingLayerID = SortingLayer.NameToID("PlayerBelow");
                 }
             }
+        }
+
+        /// <summary>
+        /// Returns the min distance the player needs to be to the interactable object.
+        /// </summary>
+        public float GetMinDistanceToInteractable()
+        {
+            return minDistanceToInteractable;
+        }
+
+        /// <summary>
+        /// Returns the min distance the player needs to be to the interactable object.
+        /// </summary>
+        public void ResetMinDistanceToInteractable()
+        {
+            minDistanceToInteractable = 5;
+        }
+        
+        private bool IsNearGround(Transform target)
+        {
+            Collider2D[] nearbyGround = Physics2D.OverlapCircleAll(target.position, 5f);
+
+            foreach (Collider2D col in nearbyGround)
+            {
+                if (col.CompareTag("Ground"))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        
+        public Vector2 GetMoveDirection()
+        {
+            if (isMoving)
+                return (targetPosition - (Vector2)transform.position).normalized;
+            else
+                return Vector2.zero;
         }
     }
 }

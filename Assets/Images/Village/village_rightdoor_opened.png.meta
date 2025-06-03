@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      village_rightdoor_opened_0: -1282419978507105608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

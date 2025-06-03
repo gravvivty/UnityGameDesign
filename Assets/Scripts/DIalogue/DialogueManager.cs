@@ -1,6 +1,7 @@
 using UnityEngine;
 using Project.Dialogue.Data;
 using System.Collections.Generic;
+using Project.Interactable.NPC;
 
 namespace Project.Dialogue
 {
@@ -11,12 +12,14 @@ namespace Project.Dialogue
     {
         private static DialogueManager instance;
         public static DialogueManager Instance => instance;
+        public NPC CurrentSpeakingNPC => currentSpeakingNPC;
 
         [SerializeField] private DialogueUI dialogueUI;
         private DialogueData currentDialogueData;
         private DialogueLine currentDialogue;
         private Vector3 currentPosition;
         private GameObject currentDialogueUIObject;
+        private NPC currentSpeakingNPC;
 
         private void Awake()
         {
@@ -26,7 +29,7 @@ namespace Project.Dialogue
                 Destroy(gameObject);
         }
 
-        public void StartDialogue(DialogueData dialogueData, string dialogueID, Vector3 position)
+        public void StartDialogue(DialogueData dialogueData, string dialogueID, NPC speaker)
         {
             if (currentDialogueUIObject != null)
             {
@@ -34,10 +37,11 @@ namespace Project.Dialogue
             }
 
             if (dialogueData == null || dialogueID == "") return;
-
-            Vector3 dialogUIPosition = position + new Vector3(3.5f, 3.5f, 0);
-            currentPosition = position;
-            var dialogeUIObject = Instantiate(dialogueUI, dialogUIPosition, Quaternion.identity);
+            currentSpeakingNPC = speaker;
+            
+            currentSpeakingNPC.PlayTalkingAnimation();
+            
+            var dialogeUIObject = Instantiate(dialogueUI);
             currentDialogueUIObject = dialogeUIObject.gameObject;
             currentDialogueData = dialogueData;
             var dialogueLine = dialogueData.GetDialogueLine(dialogueID);
@@ -51,11 +55,19 @@ namespace Project.Dialogue
 
         public void EndDialogue()
         {
+            Debug.Log($"Ending dialogue {currentDialogue?.DialogueID}");
+            
+            if (currentSpeakingNPC != null)
+            {
+                currentSpeakingNPC.StopTalkingAnimation();
+            }
+            
             if (currentDialogueUIObject != null)
             {
                 Destroy(currentDialogueUIObject);
                 currentDialogueUIObject = null;
             }
+            currentSpeakingNPC = null;
             currentDialogueData = null;
             currentDialogue = null;
         }
@@ -69,7 +81,7 @@ namespace Project.Dialogue
             if (CheckConditions(choice.Conditions))
             {
                 GiveRewards(currentDialogue.Rewards);
-                StartDialogue(currentDialogueData, choice.NextDialogueID, currentPosition);
+                StartDialogue(currentDialogueData, choice.NextDialogueID, currentSpeakingNPC);
             }
         }
 

@@ -15,6 +15,7 @@ public class InventoryUI : MonoBehaviour
     private void Start()
     {
         inventoryPanel.SetActive(true);
+        UpdateInventoryUI();
     }
 
     private void Awake()
@@ -31,7 +32,7 @@ public class InventoryUI : MonoBehaviour
             ToggleInventory();
         }
     }
-    
+
     public void UpdateInventoryUI()
     {
         // Clear the grid first
@@ -53,7 +54,7 @@ public class InventoryUI : MonoBehaviour
             inventorySlotUI.SetItemData(item);
         }
     }
-    
+
     public void ToggleInventory()
     {
         isOpen = !isOpen;

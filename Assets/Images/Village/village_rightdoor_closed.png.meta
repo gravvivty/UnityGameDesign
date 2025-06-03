@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      village_rightdoor_closed_0: 8411736923661167488
+      village_rightdoor_closed_1: -3765645405421259827
+      village_rightdoor_closed_2: -2123776453403796484
+      village_rightdoor_closed_3: 8380764192364530502
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

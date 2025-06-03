@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
+  m_Name: 51_Rod
+  m_EditorClassIdentifier: 
+  itemName: Rod
+  itemID: 51
+  description: "A long sturdy rod - \ngreat for travels"
+  icon: {fileID: 5734253761111765231, guid: 3a72069e968071e449d7dd99acafc52e, type: 3}
+  possibleCombinations:
+  - otherItemID: 52
+    resultItem: {fileID: 11400000, guid: 8e09d81f270179a4481f04b90275a234, type: 2}
+  - otherItemID: 54
+    resultItem: {fileID: 11400000, guid: ac97b48243cdb004e9ceb242734fcad9, type: 2}

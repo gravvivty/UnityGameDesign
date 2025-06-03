@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      village_rope_0: 5479112383841026743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

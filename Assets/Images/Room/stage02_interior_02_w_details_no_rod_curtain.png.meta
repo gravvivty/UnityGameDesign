@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stage02_interior_02_w_details_no_rod_curtain_0: -2873123163039062155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2db5e5330562a498accaac6098e01a, type: 3}
+  m_Name: 58_BurningCurtain
+  m_EditorClassIdentifier: 
+  itemName: BurningCurtain
+  itemID: 58
+  description: It is burning!!!
+  icon: {fileID: 6952255750235482898, guid: fe548edf8ce328144858ae8ece19c813, type: 3}
+  possibleCombinations: []

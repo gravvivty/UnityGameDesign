@@ -22,7 +22,7 @@ namespace Project.Dialogue
             if (CheckConditions(dialogue.Conditions) == false)
             {
                 Debug.Log("Dialogue conditions not met, skipping dialogue.");
-                dialogueText.text = "I cannot speak to you yet.";
+                dialogueText.text = "...";
                 return;
             }
             DisplayChoices(dialogue.Choices);
@@ -59,7 +59,7 @@ namespace Project.Dialogue
                 layoutGroup.childForceExpandHeight = false;
                 layoutGroup.childForceExpandWidth = false;
                 layoutGroup.childAlignment = TextAnchor.UpperLeft;
-                layoutGroup.padding = new RectOffset(50, 50, 50, 50);
+                layoutGroup.padding = new RectOffset(25, 25, 25, 25);
 
                 // Create text child object
                 GameObject textObj = new GameObject("Choice Text");
@@ -69,7 +69,7 @@ namespace Project.Dialogue
                 TextMeshProUGUI tmpText = textObj.AddComponent<TextMeshProUGUI>();
                 tmpText.text = choice.Text;
                 tmpText.alignment = TextAlignmentOptions.Left;
-                tmpText.fontSize = 75;
+                tmpText.fontSize = 35;
                 tmpText.color = Color.black;
 
                 Debug.Log($"Choice {i}: {choice.Text}");

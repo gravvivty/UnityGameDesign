@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      village_well_rope_0: -7509877173097914863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

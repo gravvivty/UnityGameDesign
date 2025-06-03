@@ -1,6 +1,7 @@
 using UnityEngine;
 using Project.Helper;
 using Project.Inventory;
+using Project.Player;
 
 namespace Project.Interactable
 {
@@ -14,6 +15,7 @@ namespace Project.Interactable
         private bool isHighlighted = false;
         private bool waitingForPlayerToGetClose = false;
         private float minInteractionDistance = 5f;
+        private GameObject hoveredObject;
 
         protected virtual void Start()
         {
@@ -23,7 +25,7 @@ namespace Project.Interactable
 
         protected virtual void Update()
         {
-            GameObject hoveredObject = mouseRaycast.GetGameObject();
+            hoveredObject = mouseRaycast.GetGameObject();
             bool shouldHighlight = false;
 
             if (hoveredObject != null)
@@ -41,14 +43,16 @@ namespace Project.Interactable
             // Check if we're waiting for player to get close
             if (waitingForPlayerToGetClose)
             {
-                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                PlayerMovement player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
                 if (player != null)
                 {
                     float distance = Vector3.Distance(transform.position, player.transform.position);
-                    if (distance <= minInteractionDistance)
+                    if (distance <= player.GetMinDistanceToInteractable())
                     {
+                        // Stop waiting for player to get close and start interaction
                         waitingForPlayerToGetClose = false;
                         Interact();
+                        player.ResetMinDistanceToInteractable();
                     }
                 }
             }
@@ -69,6 +73,44 @@ namespace Project.Interactable
                 spriteOutline.ShowOutline(shouldHighlight);
                 isHighlighted = shouldHighlight;
             }
+
+            if (shouldHighlight)
+            {
+                // Check tags only if we're actually hovering this object
+                switch (hoveredObject.tag)
+                {
+                    case "Door":
+                        CursorManager.Instance.SetDoorCursor();
+                        break;
+                    case "NPC":
+                        CursorManager.Instance.SetDialogueCursor();
+                        break;
+                    case "Item":
+                        CursorManager.Instance.SetGrabCursor();
+                        break;
+                    case "Put":
+                        CursorManager.Instance.SetPutCursor();
+                        break;
+                    default:
+                        CursorManager.Instance.SetNormalCursor();
+                        break;
+                }
+            }
+            else
+            {
+                CursorManager.Instance.SetNormalCursor();
+            }
+
+            hoveredObject = null;
+        }
+        
+        /// <summary>
+        /// Allows forcing an interaction immediately, bypassing proximity logic.
+        /// </summary>
+        public void ForceInteract()
+        {
+            waitingForPlayerToGetClose = false;
+            Interact();
         }
 
         protected abstract void Interact();

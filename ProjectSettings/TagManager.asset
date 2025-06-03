@@ -8,6 +8,9 @@ TagManager:
   - Dialogue
   - Mouse
   - Item
+  - Door
+  - NPC
+  - Put
   layers:
   - Default
   - TransparentFX
@@ -54,20 +57,23 @@ TagManager:
   - name: Ground
     uniqueID: 3930634127
     locked: 0
+  - name: BackgroundDeco
+    uniqueID: 1637755461
+    locked: 0
   - name: PlayerBelow
     uniqueID: 2274414727
     locked: 0
   - name: NPC
     uniqueID: 2612552603
     locked: 0
-  - name: Item
-    uniqueID: 207057707
-    locked: 0
   - name: Dialogue
     uniqueID: 4088183047
     locked: 0
   - name: Objects
     uniqueID: 1234456679
+    locked: 0
+  - name: Item
+    uniqueID: 207057707
     locked: 0
   - name: PlayerAbove
     uniqueID: 4257416075

@@ -1,3 +1,4 @@
+using Project.Helper;
 using Project.Inventory;
 using UnityEngine;
 
@@ -21,24 +22,28 @@ namespace Project.Interactable.Items
         protected override void Start()
         {
             base.Start();
-            
+
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
-        
+
         /// <summary>
         /// Called when the player interacts with the item.
         /// Adds the item to the inventory and deactivates the GameObject.
         /// </summary>
         protected override void Interact()
         {
-            
+
             if (spriteRenderer != null && itemData != null && itemData.icon != null)
             {
                 spriteRenderer.sprite = itemData.icon;
             }
-            
+
             InventoryManager.Instance.AddItem(itemData);
-            gameObject.SetActive(false);
+            
+            // Reset Cursor after pickup
+            CursorManager.Instance.SetNormalCursor();
+            
+            Destroy(gameObject);
 
             // Call the UpdateInventoryUI() method to update the UI when an item is picked up
             InventoryUI inventoryUI = FindFirstObjectByType<InventoryUI>(); // Find the InventoryUI component
@@ -52,7 +57,7 @@ namespace Project.Interactable.Items
                 Debug.LogWarning("Inventory UI is not active or missing.");
             }
         }
-        
+
         /// <summary>
         /// Gets the ItemData associated with this item.
         /// </summary>
